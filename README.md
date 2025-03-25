@@ -2,6 +2,7 @@
 
 A command-line tool for exploring Git internals, written in Kotlin. This program allows you to examine the internal structure of a Git repository, including branches, commits, trees, and blobs.
 
+## Description
 
 Git Internals Explorer provides a way to understand how Git works internally by exposing the underlying data structures. It reads directly from the `.git` directory of a repository and provides commands to:
 
@@ -10,6 +11,7 @@ Git Internals Explorer provides a way to understand how Git works internally by 
 - Display commit history
 - Show the file structure of a commit
 
+## Installation
 
 1. Clone this repository
 2. Build the project using Gradle:
@@ -21,8 +23,11 @@ Git Internals Explorer provides a way to understand how Git works internally by 
    ./gradlew run
    ```
 
+## Available Commands
+
 The greater-than symbol followed by a space > represents the user input. Note that it's not part of the input.
 
+### list-branches
 
 Lists all branches in the repository, with the active branch marked with an asterisk (*).
 
@@ -37,6 +42,7 @@ Enter command:
 * master
 ```
 
+### cat-file
 
 Displays the contents of a Git object by its hash.
 
@@ -57,6 +63,7 @@ commit message:
 awsome hello
 ```
 
+### log
 
 Displays the commit history for a specified branch.
 
@@ -85,6 +92,7 @@ John jdoe@email.com commit timestamp: 2021-12-11 22:31:36 -03:00
 simple hello
 ```
 
+### commit-tree
 
 Displays the file structure of a commit.
 
@@ -101,6 +109,7 @@ src/main.kt
 src/utils/helper.kt
 ```
 
+## How It Works
 
 Git Internals Explorer reads directly from the `.git` directory of a repository:
 
@@ -110,8 +119,10 @@ Git Internals Explorer reads directly from the `.git` directory of a repository:
 
 The program decompresses and parses these objects to display their contents in a human-readable format.
 
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
